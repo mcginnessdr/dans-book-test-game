@@ -7,7 +7,7 @@ WIDTH, HEIGHT = 1000, 800
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Dan's Book - Test Game") # title of game window
 pygame.font.init()
-FONT = pygame.font.SysFont("impact", 50) # change game font and font size
+FONT = pygame.font.SysFont("impact", 30) # change game font and font size
 BG = pygame.image.load("backgroundimage.jpeg") # change background image
 
 
@@ -43,6 +43,16 @@ def main():
                 run = False
                 break
 
+    keys = pygame.key.get_pressed()
+
+    if keys[pygame.K_ESCAPE]:
+        pygame.quit()
+    
+
+def draw():
+    WIN.blit(BG, (0, 0))
+
+    pygame.display.update()
 
 
 if __name__ == "__main__":
