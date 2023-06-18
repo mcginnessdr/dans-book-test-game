@@ -11,6 +11,10 @@ FONT = pygame.font.SysFont("impact", 30) # change game font and font size
 BG = pygame.image.load("backgroundimage.jpeg") # change background image
 
 
+class Library():
+    def __init__(self):
+        self.
+
 class Book():
     def __init__(self):
         self.title = ""
@@ -38,6 +42,8 @@ def main():
     
     while run:
 
+
+
          for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
@@ -57,49 +63,62 @@ def draw():
 
 def main_menu():
 
+    def exit_game():
 
-def book():
+    def library():
 
-def save_progress():
 
-def delete_book():
+        def book():
 
-def publish_book():
+        def save_progress():
+
+        def delete_book():
+
+        def publish_book():
 
 
 def author():
 
-def new_author():
+    def new_author():
 
-def delete_author():
+    def edit_author(:)
+
+    def delete_author():
 
 
 def left_page():
 
+    def new_page():
+
+    def edit_page():
+
+    def delete_page():
+
+
 def right_page():
 
-def new_page():
+    def new_page():
 
-def edit_page():
+    def edit_page():
 
-def delete_page():
+    def delete_page():
 
 
 def title():
 
-def edit_title():
+    def edit_title():
 
 
 def body():
 
-def edit_body():
-    
+    def edit_body():
+
 
 def page_num():
 
-def add_page_num():
+    def add_page_num():
     
-def delete_page_num():
+    def delete_page_num():
 
 
 if __name__ == "__main__":
