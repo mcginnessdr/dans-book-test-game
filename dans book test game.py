@@ -62,6 +62,11 @@ def draw():
 
 
 def main_menu():
+    button_one_text = FONT.render("Enter Library", (255, 255, 255))
+    button_two_text = FONT.render("Exit", (255, 255, 255))
+    WIN.blit(button_one_text, (200, 100))
+    WIN.blit(button_two_text, (200, 200))
+
 
     def exit_game():
 
