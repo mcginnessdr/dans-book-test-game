@@ -55,5 +55,52 @@ def draw():
     pygame.display.update()
 
 
+def main_menu():
+
+
+def book():
+
+def save_progress():
+
+def delete_book():
+
+def publish_book():
+
+
+def author():
+
+def new_author():
+
+def delete_author():
+
+
+def left_page():
+
+def right_page():
+
+def new_page():
+
+def edit_page():
+
+def delete_page():
+
+
+def title():
+
+def edit_title():
+
+
+def body():
+
+def edit_body():
+    
+
+def page_num():
+
+def add_page_num():
+    
+def delete_page_num():
+
+
 if __name__ == "__main__":
     main()
