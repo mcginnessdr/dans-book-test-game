@@ -1,25 +1,53 @@
-import pygame
-import time
-import random
+import pygame, os, time, random
 
 
-WIDTH, HEIGHT = 1000, 800
-WIN = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Dan's Book - Test Game") # title of game window
-pygame.font.init()
-FONT = pygame.font.SysFont("impact", 25) # change game font and font size
-BG = pygame.image.load("backgroundimage.jpeg") # change background image
+
+
+class Game():
+    def __init__(self):
+        pygame.init()
+        self.WIN_WIDTH, self.WIN_HEIGHT = 1000, 800
+        self.WIN = pygame.display.set_mode((self.WIN_WIDTH, self.WIN_HEIGHT))
+        self.WIN_TITLE = pygame.display.set_caption("Dan's Book - Test Game")
+        self.FONT = pygame.font.SysFont("impact", 20)
+        self.BG = pygame.image.load("backgroundimage.jpeg")
+        self.CANVAS = pygame.Surface((self.WIN_WIDTH, self.WIN_HEIGHT))
+        #self.running, self.playing = True, True
+        self.actions = {
+            "left" : False,
+            "right" : False,
+            "up" : False,
+            "down" : False,
+            "action_1" : False,
+            "action_2" : False,
+            "back" : False,
+            "enter" : False
+        }
+        #self.dt, self.prev_time = 0, 0
+        #self.state_stack = []
+        #self.load_assets()
+
 
 
 class Library():
     def __init__(self):
-        def ...
+        self.book_shelf = {
+            "slot_1" : False,
+            "slot_2" : False,
+            "slot_3" : False
+        }
+
+
+
 
 class Book():
     def __init__(self):
-        self.title = ""
-        self.sub_title = ""
-        self.author = ""
+        self.book_title = ""
+        self.book_sub_title = ""
+        self.book_author = ""
+
+
+
 
 class Page():
     def __init__(self):
@@ -28,53 +56,11 @@ class Page():
         self.page_sub_title = ""
         self.body_text = ""
 
+
+
+
 class Author():
     def __init__(self):
         self.f_name = ""
         self.l_name = ""
         self.password = ""
-
-
-def main():
-    run = True
-    
-    while run:
-
-
-
-         for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                run = False
-                break
-
-    keys = pygame.key.get_pressed()
-
-    if keys[pygame.K_ESCAPE]:
-        pygame.quit()
-    
-
-def draw():
-    WIN.blit(BG, (0, 0))
-
-    pygame.display.update()
-
-
-def main_menu():
-
-
-def library():
-    
-    def create_new_book():
-
-    def edit_book():
-
-    def delete_book():
-
-    
-    
-def exit()
-    
-
-
-if __name__ == "__main__":
-    main()
