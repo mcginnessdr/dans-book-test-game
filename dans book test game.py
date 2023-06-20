@@ -27,7 +27,6 @@ class Game():
         self.load_assets() 
 
 
-
     def get_events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -72,6 +71,22 @@ class Game():
                     self.actions["enter"] = False
 
 
+    def update(self):
+        pass
+
+
+    def render(self):
+        self.WIN.blit(pygame.transform.scale(self.CANVAS,(self.WIN_WIDTH, self.WIN_HEIGHT)) (0, 0))
+        pygame.display.flip()
+
+    
+    def get_dt(self):
+        now = time.time()
+        self.dt = now - self.prev_time
+        self.prev_time = now
+
+    
+    def draw text(self, surface, text, color, x, y)
 
 class Library():
     def __init__(self):
@@ -105,4 +120,3 @@ class Author():
         self.f_name = ""
         self.l_name = ""
         self.password = ""
-        
