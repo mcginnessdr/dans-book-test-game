@@ -26,7 +26,16 @@ class Game():
         self.state_stack = [] # NEED TO STUDY
         self.load_assets() 
 
-
+    def game_loop(self):
+        while self.playing:
+            self.get_events()
+            if self.actions["enter"]:
+                self.playing = False
+            self.CANVAS.fill(255, 255, 255)
+            self.WIN.blit(self.CANVAS, (0,0))
+            pygame.display.update()
+            self.reset_keys()
+    
     def get_events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -88,6 +97,11 @@ class Game():
     
     def draw text(self, surface, text, color, x, y)
 
+
+
+
+"""
+
 class Library():
     def __init__(self):
         self.book_shelf = {
@@ -120,3 +134,6 @@ class Author():
         self.f_name = ""
         self.l_name = ""
         self.password = ""
+
+        
+"""
