@@ -26,16 +26,15 @@ class Game():
         self.state_stack = [] # NEED TO STUDY
         self.load_assets() 
 
+
     def game_loop(self):
         while self.playing:
-            self.get_events()
-            if self.actions["enter"]:
-                self.playing = False
-            self.CANVAS.fill(255, 255, 255)
-            self.WIN.blit(self.CANVAS, (0,0))
-            pygame.display.update()
-            self.reset_keys()
-    
+           self.get_dt()
+           self.get_events()
+           self.update()
+           self.render()
+
+
     def get_events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -79,6 +78,11 @@ class Game():
                 if event.key == pygame.K_RETURN:
                     self.actions["enter"] = False
 
+    def load_assets():
+        self.assets_dir = os.path.join("assets")
+        self.sprite_dir = os.path.join(self.assets_dir, "sprites")
+        #self.font_dir = os.path.join(self.assets_dir, "font")
+        #self.font = pygame.font.Font(os.path.join(self.font_dir, "font goes here.ttf"), 20)
 
     def update(self):
         pass
@@ -95,7 +99,10 @@ class Game():
         self.prev_time = now
 
     
-    def draw text(self, surface, text, color, x, y)
+if __name__ == "__main__":
+    g = Game()
+    while g.running:
+        g.game_loop()
 
 
 
